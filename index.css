@@ -3,12 +3,13 @@ body{
   font-size: 16px;
   color:white;
   font-weight: 400;
-  display:flex;
-  flex-direction: row;
-
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 .main-div{
-  box-shadow: 2px 3px 7px 0px rgb(0, 0, 0, 0.35);
+  box-shadow: 2px 3px 7px 0px rgba(0, 0, 0, 0.35);
   border-radius: 5px;
   width: 600px;
   height: 400px;
@@ -18,32 +19,37 @@ h2, h4{
   margin: 0;
 }
 .title-div{
-  padding-left: 30px;
-
+  padding-left: 25px;
+  height: 45%;
+  width: 100%;
 }
 .body-div{
-  display: flex;
+  height: 55%;
   width: 100%;
+  display: flex;
+  flex-direction: row;
 }
 #sub1-div, #sub2-div {
   padding: 20px 0px 20px 20px;
+  height: 100%;
+  display: inline-block;
 }
 #sub1-div{
-  width: 50rem;
+  width: 50%;
   background-color: #2ab2af;
-  padding-left: 30px;
+  padding: 25px;
 }
 #sub1-div p{
   margin-bottom: 20px;
 }
 #sub2-div{
-  width: 50rem;
-  background-color:  #2EBFBD;
-  padding-left: 30px;
+  width: 50%;
+  background-color: #2EBFBD;
+  padding: 25px;
 }
 #sign{
   color: white;
-  background-color:   hsl(71, 73%, 54%);
+  background-color: hsl(71, 73%, 54%);
   border: none;
   padding: 12px 80px 12px 80px;
   border-radius: 5px;
@@ -66,7 +72,7 @@ h2, h4{
 }
 @media(max-width: 650px){
   .body-div{
-    flex-direction: row;
+    flex-direction: column;
   }
   #sub1-div, #sub2-div, .main-div{
     width: 100%;
